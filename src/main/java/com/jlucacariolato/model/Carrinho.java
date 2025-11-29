@@ -5,13 +5,13 @@ import java.util.List;
 public class Carrinho {
     private int id;
     private List<Produto> listaProdutos;
-    private double totalPagar;
+
 
     //Construtor
     public Carrinho(int id, List<Produto> listaProdutos, double totalPagar){
         this.id = id;
         this.listaProdutos = listaProdutos;
-        this.totalPagar = totalPagar;
+
     }
 
     public int getId() {
@@ -30,11 +30,4 @@ public class Carrinho {
         this.listaProdutos = listaProdutos;
     }
 
-    public double getTotalPagar() {
-        return totalPagar;
-    }
-
-    public void setTotalPagar(double totalPagar) {
-        this.totalPagar = totalPagar;
-    }
 }
