@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DatabaseConnection {
 
     //VARIAVEIS PARA CONEXÃO
-    private static final String URL = "jdbc:mysql://localhost:3306/database";
+    private static final String URL = "jdbc:postgresql://localhost:5432/ecommerce";
     private static final String USER = "root";
     private static final String PASSWORD = "1234";
 

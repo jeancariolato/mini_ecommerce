@@ -1,18 +1,29 @@
 package com.jlucacariolato.model;
 
+import java.time.LocalDateTime;
+
 public class Checkout {
     private int id;
-    private Carrinho carrinho;
-    private Tipo_Pagamento tipoPagamento;
+    private int id_carrinho;
+    private int id_tipo_pagamento;
+    private double valortotal;
+    private LocalDateTime dataCheckout;
 
     //CONSTRUTOR
-    public Checkout(int id, Carrinho carrinho, Tipo_Pagamento tipoPagamento){
-        this.id = id;
-        this.carrinho = carrinho;
-        this.tipoPagamento = tipoPagamento;
+
+    public Checkout(){
+
     }
 
+    public Checkout(int id, int id_carrinho, int id_tipo_pagamento) {
+        this.id = id;
+        this.id_carrinho = id_carrinho;
+        this.id_tipo_pagamento = id_tipo_pagamento;
+    }
+
+
     //GETTERS AND SETTERS
+
     public int getId() {
         return id;
     }
@@ -21,19 +32,35 @@ public class Checkout {
         this.id = id;
     }
 
-    public Carrinho getCarrinho() {
-        return carrinho;
+    public int getId_carrinho() {
+        return id_carrinho;
     }
 
-    public void setCarrinho(Carrinho carrinho) {
-        this.carrinho = carrinho;
+    public void setId_carrinho(int id_carrinho) {
+        this.id_carrinho = id_carrinho;
     }
 
-    public Tipo_Pagamento getTipoPagamento() {
-        return tipoPagamento;
+    public int getId_tipo_pagamento() {
+        return id_tipo_pagamento;
     }
 
-    public void setTipoPagamento(Tipo_Pagamento tipoPagamento) {
-        this.tipoPagamento = tipoPagamento;
+    public void setId_tipo_pagamento(int id_tipo_pagamento) {
+        this.id_tipo_pagamento = id_tipo_pagamento;
+    }
+
+    public double getValortotal() {
+        return valortotal;
+    }
+
+    public void setValortotal(double valortotal) {
+        this.valortotal = valortotal;
+    }
+
+    public LocalDateTime getDataCheckout() {
+        return dataCheckout;
+    }
+
+    public void setDataCheckout(LocalDateTime dataCheckout) {
+        this.dataCheckout = dataCheckout;
     }
 }
