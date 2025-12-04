@@ -37,3 +37,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+# Ignore IDE workspace files that shouldn't be committed
+.idea/workspace.xml
