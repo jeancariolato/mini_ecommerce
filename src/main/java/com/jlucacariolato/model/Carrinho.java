@@ -39,7 +39,7 @@ public class Carrinho {
         this.totalPagar = totalPagar;
     }
 
-    //Método para calcular o total a pagar
+    //Metodo para calcular o total a pagar
     public double calcularTotalPagar() {
         if (listaProdutos == null || listaProdutos.isEmpty()) {
             return 0.0;

@@ -1,10 +1,10 @@
 package com.jlucacariolato.dao;
 
-import com.jlucacariolato.model.Carrinho;
 import com.jlucacariolato.model.Checkout;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class CheckoutDAO {
 
@@ -19,6 +19,13 @@ public class CheckoutDAO {
     //MÉTODOS PARA MANIPULAR
     public void deletar(int id) {
         String sql = "DELETE FROM checkout WHERE id = ?";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void inserir(Checkout checkout){
